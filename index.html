@@ -399,19 +399,24 @@
                     <!-- Contact Start -->
                     <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
                         <h1 class="title pb-3 mb-5">Contact Me</h1>
-						<p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a></p>
-                        <form name="contact">
+
+                        <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                            <strong>Terima Kasih</strong> Pesan sudah terikirm.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+
+						<form name="contact">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control border-0 bg-secondary" id="name" placeholder="Your Name" name="name">
-                                        <label for="name">Your Name</label>
+                                        <label for="name">Nama</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control border-0 bg-secondary" id="email" placeholder="Your Email" name="email">
-                                        <label for="email">Your Email</label>
+                                        <label for="email">Email</label>
                                     </div>
                                 </div>
                                 <!--<div class="col-12">
@@ -427,8 +432,13 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit plus reset">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3 btn-kirim" type="submit">Kirim</button>
                                 </div>
+
+                                <button class="btn btn-primary d-none btn-loading" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm " role="status" aria-hidden="true"></span>
+                                    Loading...
+                                  </button>
                             </div>
                         </form>
                     </section>
@@ -485,11 +495,28 @@
               <script>
                 const scriptURL = 'https://script.google.com/macros/s/AKfycbwVHqU0l1S0BHIw3Snna1MEbi0XIhZsdnka4Lqz2cvjeYh-eOXpo17AgVhPSMTGRvhXVw/exec'
                 const form = document.forms['contact']
+                const btnKirim=document.querySelector('.btn-kirim');
+                const btnLoading=document.querySelector('.btn-loading');
+                const myAlert=document.querySelector('.my-alert');
               
-                form.addEventListener('submit', e => {
+                form.addEventListener('submit', (e) => {
                   e.preventDefault()
+                // tombol klik
+                // tombol loading, hilang tombol kirim
+                btnLoading.classList.toggle('d-none')
+                btnKirim.classList.toggle('d-none')
+
                   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                    .then(response => console.log('Success!', response))
+                    .then(response =>{ 
+                      // tombol kirim, hilang tombol kirim
+                    btnLoading.classList.toggle('d-none')
+                     btnKirim.classList.toggle('d-none')
+                    //  tampil alert
+                    myAlert.classList.toggle('d-none')
+                    //reset isi
+                    form.reset();
+                    console.log('Success!', response)
+                })
                     .catch(error => console.error('Error!', error.message))
                 })
               </script>
