@@ -5,6 +5,7 @@ Junior Web Developer
 --------------------
 
 Saya sedang mempelajari bahasa PHP.
+Dan hal dasar untuk CRUD sudah saya pelajari pada framework CodeIgniter dan Laravel
 
 * 🌍  I'm based in Brebes
 * 🖥️  See my portfolio at [CodeIgniter](http://dolancilacap.com)
