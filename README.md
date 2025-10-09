@@ -4,11 +4,16 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Junior Web Developer
 --------------------
 
-Saya sedang mempelajari bahasa PHP.
-Dan hal dasar untuk CRUD sudah saya pelajari pada framework CodeIgniter dan Laravel
+💻 Junior Programmer | Backend Developer | Hospital Information System (SIMRS)
 
-* 🌍  I'm based in Brebes
-* 🖥️  See my portfolio at [CodeIgniter](http://dolancilacap.com)
+Halo! Saya seorang Junior Programmer dengan pengalaman bekerja di lingkungan Rumah Sakit, mengembangkan dan memelihara sistem informasi rumah sakit (SIMRS).
+Saya memiliki ketertarikan kuat di bidang backend development, terutama dalam membangun API, mengoptimalkan database query, dan meningkatkan performa aplikasi.
+
+Saya senang mempelajari hal-hal baru, bereksperimen dengan teknologi backend, dan mencari solusi efisien untuk tantangan nyata di dunia kesehatan digital.
+
+🛠 Tech Stack: PHP (CodeIgniter 3 & Laravel), JavaScript, MySQL, PostgreSQL, REST API <br>
+🌱 Currently learning: Clean architecture & optimization for hospital data systems <br>
+📍 Focus: Backend logic, data integration, and performance tuning
 
 ### Skills
 
