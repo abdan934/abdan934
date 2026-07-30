@@ -177,7 +177,8 @@
   top: 50%;
   left: 50%;
   font-size: 90px;
-  background: rgba(8, 78, 148, 0.9);
+  /* background: rgba(8, 78, 148, 0.9); */
+  background: rgba(44, 62, 80, 0.5);
   opacity: 0;
   transition: .5s;
 }
@@ -215,4 +216,8 @@
 
 .testimonial-carousel .owl-dot.active {
   background: var(--primary);
+}
+
+.fs-large{
+  font-size: x-large;
 }
