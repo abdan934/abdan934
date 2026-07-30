@@ -93,6 +93,30 @@
   animation: action 1s infinite alternate;
 }
 
+.back-to-down {
+  position: fixed;
+  display: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1;
+  font-size: 30px;
+  right: 30px;
+  bottom: 70px;
+  transition: background 0.5s;
+  z-index: 11;
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+
+.back-to-down i {
+  color: var(--primary);
+}
+
+.back-to-down i:hover {
+  color: var(--dark);
+}
+
 @-webkit-keyframes action {
   0% {
     transform: translateY(0);

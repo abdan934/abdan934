@@ -91,5 +91,20 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
+
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() <= 100) {
+            $('.back-to-down').fadeIn('slow');
+        } else {
+            $('.back-to-down').fadeOut('slow');
+        }
+    });
+
+    $('.back-to-down').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(document).height()
+        }, 1200000);
+    });
 })(jQuery);
 
