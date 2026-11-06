@@ -88,6 +88,12 @@
         }
     });
     $('.back-to-top').click(function () {
+        // Start Locomotive Scroll Buttons
+        if (window.locomotiveScroll) {
+            window.locomotiveScroll.scrollTo(0, { duration: 1.5 });
+            return false;
+        }
+        // End Locomotive Scroll Buttons
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
@@ -102,9 +108,15 @@
 
     $('.back-to-down').on('click', function(e) {
         e.preventDefault();
+        // Start Locomotive Scroll Buttons
+        if (window.locomotiveScroll) {
+            window.locomotiveScroll.scrollTo($(document).height(), { duration: 1.2 });
+            return;
+        }
+        // End Locomotive Scroll Buttons
         $('html, body').animate({
             scrollTop: $(document).height()
-        }, 1200000);
+        }, 1200);
     });
 })(jQuery);
 

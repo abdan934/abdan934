@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <met#aeb3b8et="utf-8">
-        <title>MyCV-Isnaeni Abdan Syakuro</title>
+        <meta charset="utf-8">
+        <title>Isnaeni Abdan Syakuro | Software Engineer</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+        <meta content="Isnaeni Abdan Syakuro, Software Engineer, SIMRS, Laravel, CodeIgniter, PostgreSQL" name="keywords">
+        <meta content="CV and portfolio of Isnaeni Abdan Syakuro, a Software Engineer building and maintaining hospital information systems (SIMRS) with Laravel, Livewire, and CodeIgniter." name="description">
+        <!-- Start Open Graph -->
+        <meta property="og:type" content="profile">
+        <meta property="og:url" content="https://abdan934.github.io/abdan934/">
+        <meta property="og:title" content="Isnaeni Abdan Syakuro | Software Engineer">
+        <meta property="og:description" content="Software engineer building hospital systems at RSU An-Ni'mah: SIMRS, a radiology PACS, and the hospital website.">
+        <meta property="og:image" content="https://abdan934.github.io/abdan934/img/profile-3.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- End Open Graph -->
 
         <!-- favicon -->
         <!-- <link rel="icon" href="img/cv.ico" type="image/x-icon" /> -->
@@ -25,17 +33,40 @@
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <!-- Start Locomotive Scroll CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/bundled/locomotive-scroll.css">
+        <!-- End Locomotive Scroll CSS -->
+        <!-- Start Skill Icons CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
+        <!-- End Skill Icons CSS -->
+        <!-- Start Flag Icons CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+        <!-- End Flag Icons CSS -->
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Start Print CV -->
+        <style>
+            @media print {
+                body, body * { color: #000 !important; background: #fff !important; box-shadow: none !important; }
+                #spinner, .back-to-top, .back-to-down, #portfolio-flters, #contact { display: none !important; }
+                .sticky-lg-top { position: static !important; height: auto !important; }
+                .wow { visibility: visible !important; animation: none !important; }
+                .collapse { display: block !important; }
+                .other-projects-toggle { display: none !important; }
+                section { break-inside: avoid; }
+            }
+        </style>
+        <!-- End Print CV -->
     </head>
 
     <body>
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <!-- <span class="sr-only">Loading...</span> -->
             </div>
@@ -43,27 +74,28 @@
         <!-- Spinner End -->
 
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-4 g-lg-5">
                 <div class="col-lg-4 sticky-lg-top vh-100">
                     <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
-                        <img class="w-100 img-fluid mb-4" src="img/profile-3.jpg" alt="Image">
+                        <img class="w-100 img-fluid mb-4" src="img/profile-3.jpg" alt="Isnaeni Abdan Syakuro">
                         <h1 class="text-primary mt-2"   >ISNAENI ABDAN SYAKURO</h1>
-                        <div class="mb-4" style="height: 100px;">
-                            <h4 class="typed-text-output d-inline-block text-light"></h4>
-                            <div class="typed-text d-none">Junior Web Developer</div>
-                            <div class="content-align-justify">
-                                <div class="typed-text"></div>
-                            </div>
+                        <div class="mb-4 px-4">
+                            <h4 class="typed-text-output d-inline-block text-light" style="min-height: 29px;"></h4>
+                            <div class="typed-text d-none">Software Engineer</div>
+                            <!-- Start Hero Tagline -->
+                            <p class="mt-2 mb-2">I build hospital systems: SIMRS, a radiology PACS, and the hospital website.</p>
+                            <p class="small mb-0"><span class="text-primary">Currently:</span> NPACS, running in production at RSU An-Ni'mah</p>
+                            <!-- End Hero Tagline -->
                         </div>
                         <div class="d-flex justify-content-center mt-auto mb-3">
-                            <a class="btn btn-secondary btn-square mx-1" href="https://web.facebook.com/afr.syakuro"target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-secondary btn-square mx-1" href="https://www.instagram.com/isnaeni_abdan/?hl=id"target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-secondary btn-square mx-1" href="https://www.facebook.com/afr.syakuro/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-secondary btn-square mx-1" href="https://www.instagram.com/isnaeni_abdan/" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-secondary btn-square mx-1" href="https://github.com/abdan934"target="_blank"><i class="fab fa-github"></i></a>
                             <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/isnaeni-abdan-454162251/"target="_blank"><i class="fab fa-linkedin-in "></i></a>
                         </div>
                         <div class="d-flex align-items-end justify-content-between border-top">
-                            <a href="" class="btn w-50 border-end">Download CV</a>
-                            <a href="#contact" class="btn w-50 btn-scroll">Contact Me</a>
+                            <a href="CV-Isnaeni-Abdan-Syakuro.pdf" class="btn w-100" download>Download CV</a>
+                            <!-- <a href="mailto:isnaeniabdan113@gmail.com" class="btn w-50">Contact Me</a> -->
                         </div>
                     </div>
                 </div>
@@ -73,16 +105,10 @@
                         <!-- <p>I am a fresh graduate of Diploma 3 Informatics Engineering from Politeknik Negeri Cilacap with a strong interest in web development. I have one year of experience as a full-stack developer with specialization in technologies such as Laravel, Livewire, and CodeIgniter. In addition, I served as the head of the programming community on campus and have successfully handled three web-based application projects. Currently, I am focusing on developing further skills in the field of web developer.</p> -->
                         <div class="row mb-4">
                             <div class="col-sm-6 py-1 fs-large">
-                                <span class="fw-medium text-primary">Name :</span> ISNAENI ABDAN SYAKURO
-                            </div>
-                            <div class="col-sm-6 py-1 fs-large">
-                                <span class="fw-medium text-primary">Birthday :</span> 09 Maret 2004
-                            </div>
-                            <div class="col-sm-6 py-1 fs-large">
                                 <span class="fw-medium text-primary">Degree :</span> Associate Degree
                             </div>
                             <div class="col-sm-6 py-1 fs-large">
-                                <span class="fw-medium text-primary">Experience :</span> 4 Years
+                                <span class="fw-medium text-primary">Experience :</span> <span class="exp-years">4</span> Years
                             </div>
                             <div class="col-sm-6 py-1 fs-large">
                                 <span class="fw-medium text-primary">Email :</span> isnaeniabdan113@gmail.com
@@ -91,35 +117,16 @@
                                 <span class="fw-medium text-primary">Address :</span> Brebes
                             </div>
                             <div class="col-sm-6 py-1 fs-large">
-                                <span class="fw-medium text-primary">Freelance :</span> On Going
+                                <span class="fw-medium text-primary">Freelance :</span> Available
                             </div>
                             <div class="col-sm-6 py-1 fs-large">
-                                <span class="fw-medium text-primary">Work :</span> Programmer at RSNMC
+                                <span class="fw-medium text-primary">Work :</span> Software Engineer at RSU An-Ni'mah (NMC)
                             </div>
                         </div>
-                        <h1 class="title pb-3 mb-5">About Me</h1>
-                        <p class="text-justify">
-                            I am a Web Developer with over a year of experience in the hospital environment, focusing on the development and maintenance of hospital information systems (SIMRS). During my time working, I have become proficient in developing web-based applications using the Laravel, Livewire, and CodeIgniter frameworks, and am currently deepening my skills in React and Express.js to support full-stack development. I aspire to continue being involved in new and challenging projects, as each project offers unique learning opportunities and experiences that cannot be found elsewhere. In addition to application development, I am also interested in system analysis and backend development, and enjoy exploring Linux-based operating systems such as Kali Linux and CentOS to expand my understanding of system infrastructure and security.
-                        </p>
-                        <div class="row mb-4">
-                            <div class="col-sm-12 py-1">
-                                <span class="fw-medium text-primary fs-large">Project :</span>
-                                <br>1. <a class="fw-medium text-info" target="_blank" href="#">SIMRS Feature Development & Maintenance</a>
-                                <br>2. <a class="fw-medium text-info" target="_blank" href="#">E-Meeting (Internal)</a>
-                                <br>3. <a class="fw-medium text-info" target="_blank" href="#">Sistem Informasi Peminjaman</a>
-                                <br>4. <a class="fw-medium text-info" target="_blank" href="#">Sistem Informasi Geografis</a>
-                                <br>5. <a class="fw-medium text-info" target="_blank" href="#">Sistem Informasi Manajemen Stok & Gaji</a>
-                                <br>6. <a class="fw-medium text-info" target="_blank" href="#">Sistem Informasi Absensi - PT Duta Samudera Karya (Laravel - Website)</a>
-                                <br>7. <a class="fw-medium text-info" target="_blank" href="#">Aplikasi Recording dan Riwayat Kesehatan Kambing - Sentra Peternakan Jatimulyo (Codeigniter 3 - Website)</a>
-                                <br>8. <a class="fw-medium text-info" target="_blank" href="#">Sistem Informasi Akademik (Laravel - Website)</a>
-                                <br>9. <a class="fw-medium text-info" target="_blank" href="#">Sistem Pencatatan Data Desa serupa DISDUKCAPIL (C# - Desktop)</a>
-                                <br>10. <a class="fw-medium text-info" target="_blank" href="https://ejournal.pnc.ac.id/index.php/senovtek">SENOVTEK (Website)</a>
-                            </div>
-                        </div>
-                        <div class="row g-4">
+                        <div class="row g-4 mb-5">
                             <div class="col-md-4 col-lg-6 col-xl-4">
                                 <div class="d-flex bg-secondary p-4">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">4</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 exp-years" data-toggle="counter-up">4</h1>
                                     <div class="ps-3">
                                         <p class="mb-0">Years of</p>
                                         <h5 class="mb-0">Experience</h5>
@@ -128,16 +135,16 @@
                             </div>
                             <div class="col-md-4 col-lg-6 col-xl-4">
                                 <div class="d-flex bg-secondary p-4">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">7</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">3</h1>
                                     <div class="ps-3">
-                                        <p class="mb-0">Happy</p>
-                                        <h5 class="mb-0">Clients</h5>
+                                        <p class="mb-0">Production</p>
+                                        <h5 class="mb-0">Systems</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-lg-6 col-xl-4">
                                 <div class="d-flex bg-secondary p-4">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">10</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">12</h1>
                                     <div class="ps-3">
                                         <p class="mb-0">Complete</p>
                                         <h5 class="mb-0">Projects</h5>
@@ -145,279 +152,245 @@
                                 </div>
                             </div>
                         </div>
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">About Me</h1>
+                        <p class="mb-0">
+                            I am a software engineer at RSU An-Ni'mah, where I have spent <span class="exp-hospital">over 2 years</span> building and maintaining the hospital information system (SIMRS). Most of my work is in PHP with CodeIgniter 3 and Laravel on PostgreSQL, and I am currently learning React and Express.js. I also like system analysis, and I spend time on Linux (CentOS, Kali) to learn more about infrastructure and security.
+                        </p>
                     </section>
                     <!-- About End -->
 
+                    <!-- Start Projects -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" id="projects">
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Projects</h1>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="bg-secondary p-4 h-100">
+                                    <h5 class="mb-1"><i class="fas fa-hospital text-primary me-2"></i>SIMRS Feature Development &amp; Maintenance</h5>
+                                    <p class="small text-primary mb-2">RSU An-Ni'mah | November 2024 - Present</p>
+                                    <p class="mb-3">The hospital management information system at RSU An-Ni'mah. I build and fix features in service modules such as pharmacy and inventory (stock transfer, stock opname), the executive dashboards, and the bridging to BPJS and SATUSEHAT.</p>
+                                    <div>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">CodeIgniter 3</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">PHP</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-secondary p-4 h-100">
+                                    <h5 class="mb-1"><i class="fas fa-x-ray text-primary me-2"></i>NPACS</h5>
+                                    <p class="small text-primary mb-2">RSU An-Ni'mah | Radiology PACS, in production</p>
+                                    <p class="mb-3">A radiology image archive (Picture Archiving and Communication System). It receives DICOM images from X-ray, CT, and ultrasound devices, matches them to radiology orders in SIMRS, shows them in an OHIF viewer where radiologists write their reports, and sends the studies to SATUSEHAT.</p>
+                                    <div>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Laravel 13</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">React 18</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">TypeScript</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Inertia.js</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">PostgreSQL</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Orthanc</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Docker</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-secondary p-4 h-100">
+                                    <h5 class="mb-1"><i class="fas fa-globe text-primary me-2"></i><a class="text-light" target="_blank" href="https://rsuannimah.com">RSU An-Ni'mah Website &amp; Admin Panel</a></h5>
+                                    <p class="small text-primary mb-2">rsuannimah.com | In production</p>
+                                    <p class="mb-3">The hospital's public website and the admin panel staff use to update it: doctor schedules, services, news and promos, quality indicators, and testimonials. Admins also get a Google Analytics 4 dashboard, and the site has a sitemap and structured data for search engines.</p>
+                                    <div>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">React 19</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">TypeScript</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Vite</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Tailwind CSS</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">Express 5</span>
+                                        <span class="badge border border-primary text-primary fw-normal me-1 mb-1">MariaDB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary mt-4 other-projects-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#other-projects" aria-expanded="false" aria-controls="other-projects">
+                            <i class="fas fa-folder-open text-primary me-2"></i>Show 9 other projects<i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                        <div class="collapse" id="other-projects">
+                            <h5 class="mt-4 mb-3">Other projects</h5>
+                            <ul class="mb-0 ps-3">
+                                <li>E-Meeting (internal)</li>
+                                <li>Lending Information System</li>
+                                <li>Geographic Information System</li>
+                                <li>Stock and Payroll Management System</li>
+                                <li>Attendance Information System for PT Duta Samudera Karya (Laravel, web)</li>
+                                <li>Goat Health Recording and History App for Sentra Peternakan Jatimulyo (CodeIgniter 3, web)</li>
+                                <li>Academic Information System (Laravel, web)</li>
+                                <li>Village Population Records App, similar to DISDUKCAPIL (C#, desktop)</li>
+                                <li><a class="text-info" target="_blank" href="https://ejournal.pnc.ac.id/index.php/senovtek">SENOVTEK (website)</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- End Projects -->
+
                     <!-- Skills Start -->
                     <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.2s" id="skills">
-                        <h1 class="title pb-3 mb-5">Skills</h1>
-                        <div class="row">
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Skills</h1>
+                        <div class="row g-4">
                             <div class="col-sm-6">
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">Laravel</p>
-                                        <p class="mb-2">90%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">Linux OS</p>
-                                        <p class="mb-2">80%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">Express</p>
-                                        <p class="mb-2">45%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">PostgreSQL</p>
-                                        <p class="mb-2">80%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">Mathematics</p>
-                                        <p class="mb-2">70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                
+                                <h5 class="mb-3"><i class="fas fa-server text-primary me-2"></i>Backend</h5>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-php-plain text-primary me-2"></i>PHP</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-laravel-original text-primary me-2"></i>Laravel</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-livewire-plain text-primary me-2"></i>Livewire</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-codeigniter-plain text-primary me-2"></i>CodeIgniter 3</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="fas fa-exchange-alt text-primary me-2"></i>REST API</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-express-original text-primary me-2"></i>Express.js (learning)</span>
                             </div>
                             <div class="col-sm-6">
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">C++</p>
-                                        <p class="mb-2">70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">C#</p>
-                                        <p class="mb-2">70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">CodeIgniter</p>
-                                        <p class="mb-2">80%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">English</p>
-                                        <p class="mb-2">70%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="skill mb-4">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-2">Digital</p>
-                                        <p class="mb-2">60%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
+                                <h5 class="mb-3"><i class="fas fa-desktop text-primary me-2"></i>Frontend</h5>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-javascript-plain text-primary me-2"></i>JavaScript</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-html5-plain text-primary me-2"></i>HTML5</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-bootstrap-plain text-primary me-2"></i>Bootstrap</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-react-original text-primary me-2"></i>React (learning)</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5 class="mb-3"><i class="fas fa-database text-primary me-2"></i>Database</h5>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-postgresql-plain text-primary me-2"></i>PostgreSQL</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-mysql-original text-primary me-2"></i>MySQL</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="fas fa-database text-primary me-2"></i>Oracle</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5 class="mb-3"><i class="fas fa-terminal text-primary me-2"></i>Systems &amp; Other</h5>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-linux-plain text-primary me-2"></i>Linux (CentOS, Kali)</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-csharp-plain text-primary me-2"></i>C#</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><i class="devicon-cplusplus-plain text-primary me-2"></i>C++</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5 class="mb-3"><i class="fas fa-language text-primary me-2"></i>Languages</h5>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><span class="fi fi-id me-2"></span>Indonesian</span>
+                                <span class="badge bg-secondary text-light fs-6 fw-normal me-1 mb-2 p-2"><span class="fi fi-gb me-2"></span>English</span>
                             </div>
                         </div>
                     </section>
                     <!-- Skills End -->
 
-                    <!-- Side Experience Start -->
-                    <section class="py-5 wow fadeInUp" data-wow-delay="0.3s" id="side-experience">
-                        <h1 class="title pb-3 mb-5">Side Experience</h1>
-                        <div class="border-end border-2 border-light pt-2 ps-5">
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-left fs-4 text-light position-absolute" style="top: -5px; right: 0px;"></span>
-                                <h5 class="mb-1">Workshop</h5>
-                                <p class="mb-2">
-                                    <strong>
-                                        EMR Downtime Management And Real Downtime Drill Batch 2 
-                                    </strong> 
-                                    <br>
-                                    | Allstay Hotel Semarang | <small>18 Juni 2026 - 20 Juni 2026</small></p>
-                                <p>
-                                    &nbsp;&nbsp;&nbsp;Workshop ini bertujuan untuk memberikan pemahaman mengenai pentingnya teknologi dalam mendukung kebutuhan fasilitas rumah sakit.
-                                    Selain itu, workshop ini juga memberikan gambaran mengenai hal-hal yang perlu dipersiapkan sebelum membangun sebuah teknologi, mulai dari kebutuhan sistem, perencanaan, pengkajian, hingga strategi pengembangan agar teknologi yang dibuat dapat digunakan dalam jangka panjang.
-                                    Pengembangan dan pemeliharaan teknologi menjadi salah satu kunci utama agar sistem dapat berjalan dengan baik. Hal ini mencakup berbagai aspek, mulai dari infrastruktur IT seperti server, jaringan internet, bahasa pemrograman, hingga komponen pendukung lainnya agar aplikasi dapat berjalan dengan aman, stabil, dan lancar.
-                                    Di sisi lain, rumah sakit juga perlu memiliki prosedur cadangan ketika aplikasi mengalami kendala atau tidak dapat digunakan. Dengan begitu, pelayanan rumah sakit tetap dapat berjalan meskipun sistem sedang mengalami gangguan. Salah satu contohnya adalah penerapan di RSUD Sultan Fatah Demak, di mana ketika SIMRS mengalami down, pelayanan tetap dapat dilakukan menggunakan alur konvensional yang telah disusun dengan rapi.
-                                </p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-left fs-4 text-light position-absolute" style="top: -5px; right: 0px;"></span>
-                                <h5 class="mb-1">Webinar</h5>
-                                <p class="mb-2">
-                                    <strong>
-                                        Security Hardening Best Practices for Modern IT Infrastructure 
-                                    </strong> 
-                                    <br>
-                                    | Online | <small>29 October 2025</small></p>
-                                <p>
-                                    &nbsp;&nbsp;&nbsp;Webinar ini membahas pentingnya melakukan <strong>configuration</strong> awal secara benar dan ketat, 
-                                    serta bagaimana menerapkan manajemen <strong>configuration</strong> yang baik dan terstruktur. 
-                                    Saya belajar bahwa pengaturan yang tepat sejak awal dapat mencegah banyak potensi 
-                                    kerentanan di kemudian hari. Selain itu, sponsor acara juga memperkenalkan 
-                                    sebuah inovasi berupa antarmuka *GUI* yang mempermudah proses pengelolaan dan 
-                                    pengamanan konfigurasi sistem secara efisien.
-                                </p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-left fs-4 text-light position-absolute" style="top: -5px; right: 0px;"></span>
-                                <h5 class="mb-1">Seminar</h5>
-                                <p class="mb-2">
-                                    <strong>
-                                        The Invisible Threats: Subdomain Takeover and Access Control Failures 
-                                    </strong> 
-                                    <br>
-                                    | Baturraden | <small>19 October 2025</small></p>
-                                <p>
-                                    &nbsp;&nbsp;&nbsp;Seminar ini membahas pentingnya menjaga keamanan <strong>subdomain</strong> agar tidak dimanfaatkan 
-                                    oleh <strong>bug hunter</strong> untuk melakukan pengambilalihan (<strong>subdomain takeover</strong>). 
-                                    Saya juga mempelajari bagaimana praktik keamanan web harus diterapkan dengan benar 
-                                    agar sistem tidak rentan terhadap <strong>injection</strong> atau eksploitasi. 
-                                    Selain itu, dijelaskan pula bagaimana cara kerja para <strong>bug hunter</strong> dalam menemukan 
-                                    dan memanfaatkan celah keamanan, sehingga peserta dapat memahami cara pencegahannya 
-                                    secara lebih efektif.
-                                </p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-left fs-4 text-light position-absolute" style="top: -5px; right: 0px;"></span>
-                                <h5 class="mb-1">Pelatihan</h5>
-                                <p class="mb-2">
-                                    <strong>
-                                        Aksi Perbaikan Untuk Kebaikan Rumah Sakit Umum An-Ni'mah Wangon Banyumas 
-                                    </strong> 
-                                    <br>
-                                    | RS AN-NI'MAH | <small>14 - 15 Mei 2025</small></p>
-                                <p>
-                                    &nbsp;&nbsp;&nbsp;Pelatihan ini diikuti oleh seluruh unit di rumah sakit, di mana setiap unit 
-                                    mendapatkan kesempatan untuk menganalisis aspek yang perlu dievaluasi di lingkup kerjanya. 
-                                    Hasil analisis kemudian didiskusikan bersama antar unit untuk menemukan solusi 
-                                    dan terobosan perbaikan yang dapat diterapkan secara menyeluruh. 
-                                    Kegiatan ini bertujuan untuk melatih kemampuan refleksi diri dan kolaborasi antarunit, 
-                                    sehingga setiap peserta dapat melihat kinerja unitnya dari sudut pandang yang berbeda 
-                                    dan berorientasi pada peningkatan kualitas pelayanan rumah sakit.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Side Experience End -->
-
                     <!-- Experience Start -->
-                    <section class="py-5 wow fadeInUp" data-wow-delay="0.3s" id="experience">
-                        <h1 class="title pb-3 mb-5">Experience</h1>
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s" id="experience">
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Experience</h1>
                         <div class="border-start border-2 border-light pt-2 ps-5">
                             <div class="position-relative mb-4">
                                 <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">Web Developer</h5>
-                                <p class="mb-2">Full-Time | RSU NMC | <small>November 2024</small></p>
-                                <p>Bertanggung jawab dalam pengembangan dan pemeliharaan Sistem Informasi Manajemen Rumah Sakit (SIMRS),
-                                    termasuk integrasi modul pelayanan, pengelolaan data pasien, serta optimasi fitur internal.</p>
+                                <h5 class="mb-1">Software Engineer</h5>
+                                <p class="mb-2">Full-Time | RSU An-Ni'mah (NMC) | <small>November 2024 - Present</small></p>
+                                <ul class="ps-3">
+                                    <li>Develop and maintain the hospital management information system (SIMRS), built with CodeIgniter 3 and PostgreSQL.</li>
+                                    <li>Build and fix features in service modules such as pharmacy and inventory (stock transfer, stock opname) and the executive dashboards.</li>
+                                    <li>Maintain the bridging between SIMRS and the national BPJS and SATUSEHAT platforms.</li>
+                                    <li>Integrate service modules and manage patient data.</li>
+                                </ul>
                             </div>
                             <div class="position-relative mb-4">
                                 <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">Junior Network Administrator</h5>
-                                <p class="mb-2">Participant | Politeknik Negeri Cilacap | <small>Agustus 2024</small></p>
-                                <p>Saya mengikuti pelatihan ini, pada skema JNA  yang diselenggarakan oleh VSGA. Pada pelatihan ini, saya juga mendapatkan sebuah ilmu terutama pada Basic Configuration pada Cisco.</p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">Progamming Web</h5>
-                                <p class="mb-2">Mahasiswa Magang | DISKOMINFO KEBUMEN | <small>1 Agustus 2023 - 29 Desember 2023</small></p>
-                                <p>Saya mengikuti magang selama 5 bulan di DISKOMINFO KEBUMEN yang memberikan saya kesempatan untuk mendalam dalam analisis sistem dan pengembangan perangkat lunak menggunakan framework CodeIgniter 3.</p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">PROTIC</h5>
-                                <p class="mb-2">Leader | UKM | <small>2022/2023</small></p>
-                                <p>Pada Tahun 2022 sampai 2023 saya mendapatkan amanah yaitu menjadi Ketua Unit Kegiatan Mahasiswa yang berfokus pada Progamming. Disini dengan adanya diskusi dengan dosen pembina serta teman pengurus setuju untuk perubahan gaya pembelajaran tentang progamming</p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">Junior Web Developer</h5>
-                                <p class="mb-2">Participant | Digitalent - VSGA | <small>2022</small></p>
-                                <p>Saya mengikuti pelatihan ini, pada skema JWD yang diselenggarakan oleh VSGA. Pada pelatihan ini, saya juga mendapatkan sebuah ilmu terutama pada bahasa pemrograman PHP.</p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">PROTIC</h5>
-                                <p class="mb-2">PSDM | UKM | <small>2021/2022</small></p>
-                                <p>Pada Tahun 2021 sampai 2022 saya mendapatkan amanah yaitu menjadi Pengurus didivisi PSDM Unit Kegiatan Mahasiswa yang berfokus pada Progamming. Disini saya diberikan tugas untuk mengatur administrasi kelas yang diadakan oleh UKM setiap minggunya.</p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-                                <h5 class="mb-1">Lomba Kimia</h5>
-                                <p class="mb-2">Participant | Lomba Kimia | <small>2019</small></p>
-                                <p>Saya pernah mengikuti Lomba Kimia pada tahun 2019 pada saat saya kelas 2 SMA.</p>
+                                <h5 class="mb-1">Web Programming Intern</h5>
+                                <p class="mb-2">Internship | DISKOMINFO Kebumen | <small>1 August 2023 - 29 December 2023</small></p>
+                                <p>Five-month internship focused on system analysis and software development using the CodeIgniter 3 framework.</p>
                             </div>
                         </div>
                     </section>
                     <!-- Experience End -->
 
+                    <!-- Start Organization -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s" id="organization">
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Organization</h1>
+                        <div class="border-start border-2 border-light pt-2 ps-5">
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Chairman, PROTIC</h5>
+                                <p class="mb-2">Student Programming Club | Politeknik Negeri Cilacap | <small>2022 - 2023</small></p>
+                                <p>Led the campus programming club and, together with the supervising lecturer and the board, changed the way programming classes were taught.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Human Resources Division (PSDM), PROTIC</h5>
+                                <p class="mb-2">Student Programming Club | Politeknik Negeri Cilacap | <small>2021 - 2022</small></p>
+                                <p>Managed the administration of the club's weekly programming classes.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Organization -->
+
+                    <!-- Side Experience Start -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s" id="side-experience">
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Training &amp; Certifications</h1>
+                        <div class="border-start border-2 border-light pt-2 ps-5">
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">EMR Downtime Management and Real Downtime Drill Batch 2</h5>
+                                <p class="mb-2">Workshop | Allstay Hotel Semarang | <small>18 - 20 June 2026</small></p>
+                                <p>Planning, building, and maintaining hospital technology for long-term use, covering servers, networks, and application stability, plus fallback procedures that keep services running when the SIMRS is down.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Security Hardening Best Practices for Modern IT Infrastructure</h5>
+                                <p class="mb-2">Webinar | Online | <small>29 October 2025</small></p>
+                                <p>Strict initial configuration and structured configuration management as a way to prevent vulnerabilities later on.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">The Invisible Threats: Subdomain Takeover and Access Control Failures</h5>
+                                <p class="mb-2">Seminar | Baturraden | <small>19 October 2025</small></p>
+                                <p>Securing subdomains against takeover, applying web security practices against injection and exploitation, and how bug hunters find security gaps.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Aksi Perbaikan Untuk Kebaikan Rumah Sakit Umum An-Ni'mah Wangon Banyumas</h5>
+                                <p class="mb-2">Training | RSU An-Ni'mah (NMC) | <small>14 - 15 May 2025</small></p>
+                                <p>Hospital-wide training in which each unit analyzed what needed evaluation in its own work and discussed improvements with other units.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Junior Network Administrator (JNA)</h5>
+                                <p class="mb-2">VSGA Training | Politeknik Negeri Cilacap | <small>22 - 26 July 2024</small></p>
+                                <p>Network administration scheme with a focus on basic Cisco configuration.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">CodeIgniter v3 Framework for Beginners</h5>
+                                <p class="mb-2">Online Course | Mindluster | <small>January 2024</small></p>
+                                <p>Certificate of achievement for a beginner course on the CodeIgniter 3 framework.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">MikroTik Certified Network Associate (MTCNA)</h5>
+                                <p class="mb-2">Certification | MikroTik | <small>June 2023, valid until June 2026</small></p>
+                                <p>Network associate certification covering MikroTik RouterOS configuration.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Oracle Academy: Database Programming with SQL</h5>
+                                <p class="mb-2">Online Course | Oracle Academy | <small>October 2022</small></p>
+                                <p>Award of course completion for SQL database programming.</p>
+                            </div>
+                            <div class="position-relative mb-4">
+                                <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+                                <h5 class="mb-1">Junior Web Developer (JWD)</h5>
+                                <p class="mb-2">VSGA Training | Digitalent | <small>2022</small></p>
+                                <p>Web development scheme with a focus on the PHP programming language.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Side Experience End -->
+
                     <!-- Education Start -->
                     <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.4s" id="education">
-                        <h1 class="title pb-3 mb-5">Education</h1>
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Education</h1>
                         <div class="row g-4">
                             <div class="col-md-12">
                                 <div class="service-item">
                                     <h5 class="mb-2">Politeknik Negeri Cilacap</h5>
                                     <p class="mb-0">
-                                        Saya adalah lulusan D3 Teknik Informatika dari Politeknik Negeri Cilacap tahun 2024 dengan capaian IPK <strong>3,53</strong>.
+                                        Diploma 3 (Associate Degree) in Informatics Engineering, graduated 2024 with a GPA of <strong>3.53</strong>.
                                     </p>
                                 </div>
                             </div>
-                            
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="service-item">
                                     <h5 class="mb-2">SMA Islam Ta'allumul Huda Bumiayu</h5>
-                                    <p class="mb-0">Saya belajar di SMA Islam Ta'allumul Huda Bumiayu pada tahun 2019.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <h5 class="mb-2">SMPN 01 Paguyangan</h5>
-                                    <p class="mb-0">Saya belajar di SMPN 01 Paguyangan pada tahun 2016.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <h5 class="mb-2">SD Pagojengan 01</h5>
-                                    <p class="mb-0">Saya belajar di SD Pagojengan 01 Pada Tahun 2009.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <h5 class="mb-2">TK Aisyiyah Busthanul Athfal Pagojengan</h5>
-                                    <p class="mb-0">Saya belajar di TK Aisyiayah Busthanul Athfal Pagojengan Pada tahun 2008. </p>
+                                    <p class="mb-0">Senior high school.</p>
                                 </div>
                             </div>
                         </div>
@@ -426,7 +399,7 @@
   
                     <!-- Portfolio Start -->
                     <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.5s" id="portfolio">
-                        <h1 class="title pb-3 mb-5">Portfolio</h1>
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Portfolio</h1>
                         <div class="row">
                             <div class="col-12">
                                 <div class="row">
@@ -443,166 +416,182 @@
                                     <section class="row">
                                         <div class="col-md-6 mb-4 portfolio-item first">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portofolio-12.JPG" alt="">
+                                                <img class="img-fluid w-100" src="img/portofolio-12.JPG" alt="EMR Downtime Management workshop, Semarang, June 2026">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portofolio-12.JPG" data-lightbox="portfolio">
+                                                    <a href="img/portofolio-12.JPG" data-lightbox="portfolio" data-title="EMR Downtime Management workshop, Semarang, June 2026">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">EMR Downtime Management workshop, Semarang, June 2026</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item first">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-11.jpeg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-11.jpeg" alt="The Invisible Threats seminar, Baturraden, October 2025">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-11.jpeg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-11.jpeg" data-lightbox="portfolio" data-title="The Invisible Threats seminar, Baturraden, October 2025">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">The Invisible Threats seminar, Baturraden, October 2025</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item first">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/foto-magang.jpeg" alt="">
+                                                <img class="img-fluid w-100" src="img/foto-magang.jpeg" alt="Internship at DISKOMINFO Kebumen, 2023">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/foto-magang.jpeg" data-lightbox="portfolio">
+                                                    <a href="img/foto-magang.jpeg" data-lightbox="portfolio" data-title="Internship at DISKOMINFO Kebumen, 2023">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">Internship at DISKOMINFO Kebumen, 2023</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item first">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="PROTIC student programming club members">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-1.jpg" data-lightbox="portfolio" data-title="PROTIC student programming club members">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">PROTIC student programming club members</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item first">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/foto-pengurus.jpeg" alt="">
+                                                <img class="img-fluid w-100" src="img/foto-pengurus.jpeg" alt="PROTIC student programming club board">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/foto-pengurus.jpeg" data-lightbox="portfolio">
+                                                    <a href="img/foto-pengurus.jpeg" data-lightbox="portfolio" data-title="PROTIC student programming club board">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">PROTIC student programming club board</p>
                                         </div>
                                     </section>
                                     <!-- CERTIFICATE -->
                                     <section class="row">
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/sertifikat_EMR.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/sertifikat_EMR.jpg" alt="EMR Downtime Management and Real Downtime Drill, PETIRS, June 2026">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/sertifikat_EMR.jpg" data-lightbox="portfolio">
+                                                    <a href="img/sertifikat_EMR.jpg" data-lightbox="portfolio" data-title="EMR Downtime Management and Real Downtime Drill, PETIRS, June 2026">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">EMR Downtime Management and Real Downtime Drill, PETIRS, June 2026</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-10.png" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-10.png" alt="The Invisible Threats seminar, PurwokertoDev x TegalSec, October 2025">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-10.png" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-10.png" data-lightbox="portfolio" data-title="The Invisible Threats seminar, PurwokertoDev x TegalSec, October 2025">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">The Invisible Threats seminar, PurwokertoDev x TegalSec, October 2025</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-9.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-9.jpg" alt="Security Hardening Best Practices webinar, Trinet x SecHard, October 2025">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-9.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-9.jpg" data-lightbox="portfolio" data-title="Security Hardening Best Practices webinar, Trinet x SecHard, October 2025">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">Security Hardening Best Practices webinar, Trinet x SecHard, October 2025</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-12.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-12.jpg" alt="In-house learning class at RSU An-Ni&#39;mah, May 2025">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-12.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-12.jpg" data-lightbox="portfolio" data-title="In-house learning class at RSU An-Ni&#39;mah, May 2025">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">In-house learning class at RSU An-Ni'mah, May 2025</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/vsga.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/vsga.jpg" alt="VSGA Junior Web Developer, 2022">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/vsga.jpg" data-lightbox="portfolio">
+                                                    <a href="img/vsga.jpg" data-lightbox="portfolio" data-title="VSGA Junior Web Developer, 2022">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">VSGA Junior Web Developer, 2022</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/vsga2.png" alt="">
+                                                <img class="img-fluid w-100" src="img/vsga2.png" alt="VSGA Junior Network Administrator, July 2024">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/vsga2.png" data-lightbox="portfolio">
+                                                    <a href="img/vsga2.png" data-lightbox="portfolio" data-title="VSGA Junior Network Administrator, July 2024">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">VSGA Junior Network Administrator, July 2024</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="MikroTik Certified Network Associate (MTCNA), June 2023">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-6.jpg" data-lightbox="portfolio" data-title="MikroTik Certified Network Associate (MTCNA), June 2023">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">MikroTik Certified Network Associate (MTCNA), June 2023</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="PROTIC Talkshow 2022, organizing committee">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-2.jpg" data-lightbox="portfolio" data-title="PROTIC Talkshow 2022, organizing committee">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">PROTIC Talkshow 2022, organizing committee</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="CodeIgniter v3 course, Mindluster, January 2024">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-5.jpg" data-lightbox="portfolio" data-title="CodeIgniter v3 course, Mindluster, January 2024">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">CodeIgniter v3 course, Mindluster, January 2024</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/portfolio-8.jpg" alt="">
+                                                <img class="img-fluid w-100" src="img/portfolio-8.jpg" alt="Design Thinking course, KTEMU x The Local Enablers, November 2022">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/portfolio-8.jpg" data-lightbox="portfolio">
+                                                    <a href="img/portfolio-8.jpg" data-lightbox="portfolio" data-title="Design Thinking course, KTEMU x The Local Enablers, November 2022">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">Design Thinking course, KTEMU x The Local Enablers, November 2022</p>
                                         </div>
                                         <div class="col-md-6 mb-4 portfolio-item second">
                                             <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-100" src="img/course_certificate-1-1.png" alt="">
+                                                <img class="img-fluid w-100" src="img/course_certificate-1-1.png" alt="Oracle Academy: Database Programming with SQL, October 2022">
                                                 <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/course_certificate-1-1.png" data-lightbox="portfolio">
+                                                    <a href="img/course_certificate-1-1.png" data-lightbox="portfolio" data-title="Oracle Academy: Database Programming with SQL, October 2022">
                                                         <i class="bi bi-search text-light"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <p class="small text-center mt-2 mb-0">Oracle Academy: Database Programming with SQL, October 2022</p>
                                         </div>
                                     </section>
                                 </div>
@@ -614,10 +603,10 @@
 
                     <!-- Contact Start -->
                     <section class="py-5 wow fadeInUp d-none" data-wow-delay="0.1s" id="contact">
-                        <h1 class="title pb-3 mb-5">Contact Me</h1>
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Contact Me</h1>
 
                         <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                            <strong>Terima Kasih</strong> Pesan sudah terikirm.
+                            <strong>Terima Kasih</strong> Pesan sudah terkirim.
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                           </div>
 
@@ -665,22 +654,24 @@
                     <section class="wow fadeIn" data-wow-delay="0.1s">
                         <div class="bg-secondary text-light text-center p-5">
                             <div class="d-flex justify-content-center mb-4">
-                                <a class="btn btn-dark btn-square mx-1" href="https://web.facebook.com/afr.syakuro"target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-dark btn-square mx-1" href="https://www.instagram.com/isnaeni_abdan/?hl=id"target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-dark btn-square mx-1" href="https://www.facebook.com/afr.syakuro/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-square mx-1" href="https://www.instagram.com/isnaeni_abdan/" target="_blank"><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-dark btn-square mx-1" href="https://github.com/abdan934"target="_blank"><i class="fab fa-github"></i></a>
                                 <a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/isnaeni-abdan-454162251/"target="_blank"><i class="fab fa-linkedin-in "></i></a>
                             </div>
-                            <div class="d-flex justify-content-center mb-3">
+                            <div class="d-flex flex-wrap justify-content-center mb-3">
                                 <a class="text-light px-3 border-end" href="#aboutme">About Me</a>
+                                <a class="text-light px-3 border-end" href="#projects">Projects</a>
                                 <a class="text-light px-3 border-end" href="#skills">Skills</a>
-                                <a class="text-light px-3 border-end" href="#side-experience">Side Experience</a>
                                 <a class="text-light px-3 border-end" href="#experience">Experience</a>
+                                <a class="text-light px-3 border-end" href="#organization">Organization</a>
+                                <a class="text-light px-3 border-end" href="#side-experience">Training</a>
                                 <a class="text-light px-3 border-end" href="#education">Education</a>
                                 <a class="text-light px-3" href="#portfolio">Portfolio</a>
                             </div>
 							
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							<p class="m-0">Powered by <a href="https://www.instagram.com/isnaeni_abdan/?hl=id">Isnaeni Abdan Syakuro</a><br> Latest Update: <span id="year"></span></p>
+							<p class="m-0">Powered by <a href="https://www.linkedin.com/in/isnaeni-abdan-454162251/">Isnaeni Abdan Syakuro</a><br> Last updated: November 2026</p>
                         </div>
                     </section>
                     <!-- Footer End -->
@@ -694,9 +685,31 @@
         <!-- Back to Down -->
         <a href="#" class="back-to-down"><i class="text-light fa fa-angle-double-down"></i></a>
         
+        <!-- Start Dynamic Experience Years -->
+        <script>
+            (function () {
+                var startYear = 2022;
+                var years = new Date().getFullYear() - startYear;
+                document.querySelectorAll('.exp-years').forEach(function (el) {
+                    el.textContent = years;
+                });
+                var now = new Date();
+                var hospitalStart = new Date(2024, 10, 1);
+                var hospitalYears = now.getFullYear() - hospitalStart.getFullYear();
+                if (now.getMonth() < hospitalStart.getMonth()) {
+                    hospitalYears -= 1;
+                }
+                var hospitalText = hospitalYears <= 1 ? 'over a year' : 'over ' + hospitalYears + ' years';
+                document.querySelectorAll('.exp-hospital').forEach(function (el) {
+                    el.textContent = hospitalText;
+                });
+            })();
+        </script>
+        <!-- End Dynamic Experience Years -->
+
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="lib/wow/wow.min.js"></script>
         <script src="lib/typed/typed.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
@@ -707,11 +720,24 @@
         <script src="lib/lightbox/js/lightbox.min.js"></script>
 
         <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+        <!-- <script src="mail/jqBootstrapValidation.min.js"></script> -->
+        <!-- <script src="mail/contact.js"></script> -->
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <!-- Start Locomotive Scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/bundled/locomotive-scroll.min.js"></script>
+        <script>
+            if (typeof LocomotiveScroll !== 'undefined') {
+                window.locomotiveScroll = new LocomotiveScroll({
+                    lenisOptions: {
+                        allowNestedScroll: true
+                    }
+                });
+            }
+        </script>
+        <!-- End Locomotive Scroll -->
 
               <!-- Script Sheets -->
               <script>
@@ -742,7 +768,7 @@
                     .catch(error => console.error('Error!', error.message))
                 })
 
-                 document.getElementById("year").textContent = new Date().getFullYear();
+                // document.getElementById("year").textContent = new Date().getFullYear();
               </script>
             <!-- Script Sheets End -->
     </body>
