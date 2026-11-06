@@ -53,7 +53,7 @@
         <style>
             @media print {
                 body, body * { color: #000 !important; background: #fff !important; box-shadow: none !important; }
-                #spinner, .back-to-top, .back-to-down, #portfolio-flters, #contact { display: none !important; }
+                #spinner, .back-to-top, .back-to-down, #portfolio-flters, #contact, #music { display: none !important; }
                 .sticky-lg-top { position: static !important; height: auto !important; }
                 .wow { visibility: visible !important; animation: none !important; }
                 .collapse { display: block !important; }
@@ -62,6 +62,30 @@
             }
         </style>
         <!-- End Print CV -->
+        <!-- Start Music Flip Cards -->
+        <style>
+            .music-row-head { display: flex; align-items: center; justify-content: space-between; margin: 12px 0 8px; }
+            .music-row-nav { display: flex; gap: 6px; }
+            .music-row-nav .btn { width: 32px; height: 32px; padding: 0; }
+            .music-row-nav.is-hidden { visibility: hidden; }
+            .music-row { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 10px; margin-bottom: 8px; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--bs-primary) transparent; }
+            .music-row::-webkit-scrollbar { height: 6px; }
+            .music-row::-webkit-scrollbar-thumb { background: var(--bs-primary); border-radius: 3px; }
+            .music-row-item { flex: 0 0 300px; scroll-snap-align: start; }
+            .music-flip { perspective: 1200px; height: 152px; }
+            .music-flip-inner { position: relative; width: 100%; height: 100%; transition: transform .6s; transform-style: preserve-3d; }
+            .music-flip.is-flipped .music-flip-inner { transform: rotateY(180deg); }
+            .music-flip-face { position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+            .music-flip-back { transform: rotateY(180deg); }
+            .music-flip-front iframe { pointer-events: none; }
+            .music-flip-hit { position: absolute; inset: 0; z-index: 1; cursor: pointer; border-radius: 12px; }
+            .music-flip.is-flipped .music-flip-hit { pointer-events: none; }
+            .music-flip-toggle { text-decoration: none; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+            @media (max-width: 575.98px) {
+                .music-row-item { flex-basis: 85%; }
+            }
+        </style>
+        <!-- End Music Flip Cards -->
     </head>
 
     <body>
@@ -356,7 +380,7 @@
                             <div class="position-relative mb-4">
                                 <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
                                 <h5 class="mb-1">MikroTik Certified Network Associate (MTCNA)</h5>
-                                <p class="mb-2">Certification | MikroTik | <small>June 2023, valid until June 2026</small></p>
+                                <p class="mb-2">Certification | MikroTik | <small>June 2023 to June 2026 (expired)</small></p>
                                 <p>Network associate certification covering MikroTik RouterOS configuration.</p>
                             </div>
                             <div class="position-relative mb-4">
@@ -406,8 +430,8 @@
                                     <div class="col-12 text-center mb-2">
                                         <ul class="list-inline mb-4" id="portfolio-flters">
                                             <li class="btn btn-secondary active"  data-filter="*"><i class="fa fa-star me-2"></i>All</li>
-                                            <li class="btn btn-secondary" data-filter=".first"><i class="fa fa-user-clock me-2"></i></i>Experience</li>
-                                            <li class="btn btn-secondary" data-filter=".second"><i class="fa fa-certificate me-2"></i></i>Certificate</li>
+                                            <li class="btn btn-secondary" data-filter=".first"><i class="fa fa-user-clock me-2"></i>Experience</li>
+                                            <li class="btn btn-secondary" data-filter=".second"><i class="fa fa-certificate me-2"></i>Certificate</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -601,6 +625,930 @@
                     <!-- Portfolio End -->
                 
 
+                    <!-- Start Music -->
+                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" id="music">
+                        <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Music I Listen To</h1>
+                        <!-- Start Music Rows -->
+                        <h5 class="mt-2 mb-3"><span class="fi fi-id me-2"></span>Indonesian artists</h5>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Pop</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Pop left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Pop right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: RAN" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/5DSVjHy2YWufmRUHBM3PLX?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of RAN"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Pandangan Pertama" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/7vARkAvliy40kkanvCQvSR?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Pandangan Pertama</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Tulus" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/2iDVt6mFbtbDEZG5ax0dTi?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Tulus"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Teh Hijau" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4R9G7azXaZe93KTX65P9fU?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Teh Hijau</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Rossa" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/0ygQsC5td2maGmglpzd7tp?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Rossa"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Tak Sanggup Lagi" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1XYFuCKBnWOBapFnOhuD1N?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Tak Sanggup Lagi</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: HIVI!" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/4ubEZ6sMsrrbQChueyouCC?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of HIVI!"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Pelangi" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3ZwqWrRpylU9nfy99qwKdR?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Pelangi</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Reza Darmawangsa" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/4FyrXdj7oNgjX7mfYzFziO?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Reza Darmawangsa"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: I&#x27;m in Love" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5df7bK3PcSE07kkGE9WSin?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: I&#x27;m in Love</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Nike Ardilla" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1JuelnhfAFnrPRqGk2wH2j?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Nike Ardilla"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Bintang Kehidupan" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4uTmBcqMZqmSpyMgJE59cI?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Bintang Kehidupan</button>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Indie &amp; alternative</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Indie & alternative left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Indie & alternative right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Hindia" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/51kyrUsAVqUBcoDEMFkX12?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Hindia"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: everything u are" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5WOSNVChcadlsCRiqXE45K?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: everything u are</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: .Feast" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7Gy1PxqrgsiqWF6JNYPHeB?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of .Feast"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Nina" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0daEJMXc3b4ZMTnvtHpuTt?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Nina</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Perunggu" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/0NbKRRBuiIUwS9irPvi7wD?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Perunggu"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Ini Abadi" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6v5RJuJ9yhvaXkMXMeMZBw?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Ini Abadi</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Sal Priadi" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1NjxFrpEGZTV2Ny0OJxeWu?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Sal Priadi"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Ada titik-titik di ujung doa" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1E7zLPDdqo0OvzVmGj5aoV?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Ada titik-titik di ujung doa</button>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Rock, punk &amp; pop punk</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Rock, punk & pop punk left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Rock, punk & pop punk right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Superman Is Dead" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/3rfoqUCU1swxeUghdDj3lt?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Superman Is Dead"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Sunset Di Tanah Anarki" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1bfbixjy7OPG2n3MbLKrKu?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Sunset Di Tanah Anarki</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Endank Soekamti" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/0sde8hCXe4RhPihKuFmxhk?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Endank Soekamti"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Sampai Jumpa" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0gxRAduMDvZ9BCFVmgolvz?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Sampai Jumpa</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Last Child" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1v1khTmozNfxB2ET1Ep288?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Last Child"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Duka" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3rXS2AEXNADrIFyuY3F6RJ?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Duka</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: For Revenge" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/0f6TyESD8E1mD2oLJ4TGv1?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of For Revenge"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Serana" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0PtJbtW50jcvvswNPn3QGd?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Serana</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Stand Here Alone" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/3YwAgafEWJCd6Haotq7Qd2?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Stand Here Alone"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Wanita Masih Banyak" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/2HMz52HUN9M4ZuQQExL9Hd?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Wanita Masih Banyak</button>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Ska, hip-hop &amp; Javanese pop</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Ska, hip-hop & Javanese pop left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Ska, hip-hop & Javanese pop right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Ska</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Tipe-X" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6Ta7YcldiJgmh6zy2HQJsd?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Tipe-X"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Kamu Ngga Sendirian" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6vkwqlK4h0rgpIgL9tChaz?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Kamu Ngga Sendirian</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Hip-hop</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Rich Brian" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/2IDLDx25HU1nQMKde4n61a?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Rich Brian"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: edamame" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1gx1z1LO7e2h4SdS0lBWI0?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: edamame</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Javanese pop &amp; dangdut</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Denny Caknan" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/3Gr3opnAGpJiTowsTyJFWG?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Denny Caknan"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Negoro Angin" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3kfVlzPUsy7x1MiPHRuFr0?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Negoro Angin</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Javanese pop &amp; dangdut</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: NDX A.K.A." frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1IDBhlpDyKr53UKKxXRHXD?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of NDX A.K.A."></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Kelingan Mantan" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3w09eeWmgkLz5BISaqcpgm?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Kelingan Mantan</button>
+                            </div>
+                        </div>
+                        <h5 class="mt-2 mb-3"><i class="fas fa-globe-americas text-primary me-2"></i>International artists</h5>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Pop</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Pop left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Pop right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Westlife" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/5Z1CCuBsyhEHngq3U5IraY?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Westlife"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: My Love" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5p0ietGkLNEqx1Z7ijkw5g?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: My Love</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: One Direction" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/4AK6F7OLvEQ5QYCBNiQWHq?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of One Direction"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Night Changes" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5O2P9iiztwhomNh8xkR9lJ?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Night Changes</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Taylor Swift" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/06HL4z0CvFAxyc27GXpf02?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Taylor Swift"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Patient Zero" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/11hcBLPtbMp4aQI6zGQLub?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Patient Zero</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Ariana Grande" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/66CXWjxzNUsdJxJ2JdwvnR?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Ariana Grande"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: hate that i made you love me" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3iy2QuCtCzpWnR6tia39AB?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: hate that i made you love me</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Justin Bieber" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1uNFoZAHBGtllmzznpCI3s?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Justin Bieber"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Beauty And A Beat" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6QFCMUUq1T2Vf5sFUXcuQ7?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Beauty And A Beat</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Shawn Mendes" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7n2wHs1TKAczGzO7Dd2rGr?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Shawn Mendes"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Treat You Better" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3QGsuHI8jO1Rx4JWLUh9jd?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Treat You Better</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Charlie Puth" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6VuMaDnrHyPL1p4EHjYLi7?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Charlie Puth"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: We Don&#x27;t Talk Anymore (feat. Selena Gomez)" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/54PbBpquVfhfrwRwvjSXbI?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: We Don&#x27;t Talk Anymore (feat. Selena Gomez)</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Ed Sheeran" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6eUKZXaKkcviH0Ku9w2n3V?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Ed Sheeran"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Shape of You" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Shape of You</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Maroon 5" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/04gDigrS5kc9YWfZHwBETP?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Maroon 5"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Payphone" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1XGmzt0PVuFgQYYnV2It7A?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Payphone</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Justin Timberlake" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/31TPClRtHm23RisEBtV3X7?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Justin Timberlake"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Mirrors" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4rHZZAmHpZrA3iH5zx8frV?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Mirrors</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Demi Lovato" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6S2OmqARrzebs0tKUEyXyp?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Demi Lovato"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Heart Attack" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1V6gIisPpYqgFeWbMLI0bA?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Heart Attack</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Jason Mraz" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/4phGZZrJZRo4ElhRtViYdl?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Jason Mraz"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: I&#x27;m Yours" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1EzrEOXmMH3G43AXT1y7pA?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: I&#x27;m Yours</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Henry Moodie" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7hr9W3IjXcm3UlLY7guLk5?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Henry Moodie"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: drunk text" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/2XhYeR0oaKHvm4p1Z5Uj1L?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: drunk text</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Sean Kingston" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6S0dmVVn4udvppDhZIWxCr?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Sean Kingston"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Eenie Meenie" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4vVTI94F9uJ8lHNDWKv0i2?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Eenie Meenie</button>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Rock &amp; alternative</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Rock & alternative left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Rock & alternative right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Linkin Park" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6XyY86QOPPrYVGvF9ch6wz?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Linkin Park"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: In the End" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/60a0Rd6pjrkxjPbaKzXjfq?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: In the End</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Coldplay" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/4gzpq5DPGxSnKTe4SA8HAU?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Coldplay"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Yellow" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Yellow</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Red Hot Chili Peppers" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/0L8ExT028jH3ddEcZwqJJ5?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Red Hot Chili Peppers"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Can&#x27;t Stop" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3ZOEytgrvLwQaqXreDs2Jx?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Can&#x27;t Stop</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Evanescence" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/5nGIFgo0shDenQYSE0Sn7c?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Evanescence"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Bring Me To Life" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0COqiPhxzoWICwFCS4eZcp?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Bring Me To Life</button>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Pop punk &amp; emo</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Pop punk & emo left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Pop punk & emo right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Green Day" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7oPftvlwr6VrsViSDV7fJY?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Green Day"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Boulevard of Broken Dreams" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0U87auHx1iZTEFcq9KVdmO?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Boulevard of Broken Dreams</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Simple Plan" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/2p4FqHnazRucYQHyDCdBrJ?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Simple Plan"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: I&#x27;m Just a Kid" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6otiaV2fagE3s8IvP6WkwG?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: I&#x27;m Just a Kid</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Neck Deep" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/2TM0qnbJH4QPhGMCdPt7fH?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Neck Deep"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Wish You Were Here" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4Ssi6tKwrTHi5qvDndrZRP?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Wish You Were Here</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: My Chemical Romance" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7FBcuc1gsnv6Y1nwFtNRCb?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of My Chemical Romance"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Welcome to the Black Parade" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5wQnmLuC1W7ATsArWACrgW?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Welcome to the Black Parade</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: The Red Jumpsuit Apparatus" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1SImpQO0GbjRgvlwCcCtFo?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of The Red Jumpsuit Apparatus"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Face Down" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4wzjNqjKAKDU82e8uMhzmr?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Face Down</button>
+                            </div>
+                            <div class="music-row-item">
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Punk Rock Factory" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1doeW0oJMkO8kEq5g9kFNR?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Punk Rock Factory"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: How Far I’ll Go" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6MjI5A5lfdNgJykVyJO1L2?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: How Far I’ll Go</button>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Metal, hip-hop, electronic &amp; more</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Metal, hip-hop, electronic & more left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Metal, hip-hop, electronic & more right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Metal &amp; metalcore</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Avenged Sevenfold" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/0nmQIMXWTXfhgOBdNzhGOs?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Avenged Sevenfold"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Hail to the King" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5anCkDvJ17aznvK5TED5uo?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Hail to the King</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Metal &amp; metalcore</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Bring Me The Horizon" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1Ffb6ejR6Fe5IamqA5oRUF?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Bring Me The Horizon"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Can You Feel My Heart" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0WSa1sucoNRcEeULlZVQXj?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Can You Feel My Heart</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Hip-hop &amp; R&amp;B</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Eminem" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7dGJo4pcD2V6oG8kP0tJRR?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Eminem"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Without Me" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/7lQ8MOhq6IN2w8EYcFNSUk?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Without Me</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Hip-hop &amp; R&amp;B</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: John Legend" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/5y2Xq6xcjJb2jVM54GHK3t?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of John Legend"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: All of Me" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: All of Me</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Electronic</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Avicii" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/1vCWHaC5f2uS3yhpwWbIA6?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Avicii"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Wake Me Up" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0nrRP2bk19rLc0orkWPQk2?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Wake Me Up</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Country &amp; folk</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: John Denver" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/7EK1bQADBoqbYXnT4Cqv9w?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of John Denver"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Take Me Home, Country Roads - Original Version" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1YYhDizHx7PnDhAhko6cDS?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Take Me Home, Country Roads - Original Version</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">Religious</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: Maher Zain" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6PUZZX4GCzeFS0GaDWxVwz?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of Maher Zain"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Rahmatun Lil’Alameen" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4gcQ4sBOIX8s510XrNZQUA?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Rahmatun Lil’Alameen</button>
+                            </div>
+                            <div class="music-row-item">
+                                <p class="small text-light mb-1">J-pop</p>
+                                <div class="music-flip">
+                                    <div class="music-flip-inner">
+                                        <div class="music-flip-face music-flip-front">
+                                            <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify artist: natori" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/artist/6WmXWHmfBMhupyIs8MSqtu?theme=0"></iframe>
+                                            <div class="music-flip-hit" role="button" tabindex="0" aria-label="Show top song of natori"></div>
+                                        </div>
+                                        <div class="music-flip-face music-flip-back">
+                                            <iframe class="music-back" style="border-radius: 12px;" width="100%" height="152" title="Spotify track: Overdose" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/7b4fxkOA4NDr4tDylrb10K?theme=0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link btn-sm text-info p-0 mt-1 music-flip-toggle"><i class="fas fa-sync-alt me-1"></i>Top song: Overdose</button>
+                            </div>
+                        </div>
+                        <h5 class="mt-4 mb-3"><i class="fas fa-compact-disc text-primary me-2"></i>Songs on repeat</h5>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Songs 1 to 11</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Songs 1 to 11 left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Songs 1 to 11 right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: I Miss You" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1AdYZ6X00nXmO613Y7GJOl?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Iris" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6Qyc6fS4DsZjB2mRW9DsQs?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Dear Maria, Count Me In" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0JJP0IS4w0fJx01EcrfkDe?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Rewrite the Stars" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/630sXRhIcfwr2e4RdNtjKN?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Sweet but Psycho" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/7DnAm9FOTWE3cUvso43HhI?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Price Tag" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/2fTsFCKRFQ5M0igJgabnLA?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Stereo Hearts" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4ywvnllm7kpaXDsa1VNNpY?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: A Thousand Miles" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4w1lzcaoZ1IC2K5TwjalRP?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Lampu Merah" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6E7DsxwI4eOcMHLYRUDCaw?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Melompat Lebih Tinggi" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/7Hun5YHQ5TEe9j97cU5XPg?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Sesi Potret" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4xoY4lZNoTjEuHsSmhgF1G?theme=0"></iframe>
+                            </div>
+                        </div>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Songs 12 to 21</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Songs 12 to 21 left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Songs 12 to 21 right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Monolog" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1zu5ZpnrSArdoaT6Qq3yo9?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Disarankan di Bandung" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/5VyWqCgmRSa1o364B4UGI8?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: 1000x" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6ksyG6PARbZD5j4WTMJ08G?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: pick up the phone" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/6Z1IBgysq1FfSzhQWUdvAc?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Overdose" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/2Dzzhb1oV5ckgOjWZLraIB?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Face Down" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/4wzjNqjKAKDU82e8uMhzmr?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Do You Want to Build a Snowman?" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1IJqHZkcuS6nSTiBblGML9?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Take Me Home, Country Roads" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1YYhDizHx7PnDhAhko6cDS?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Heart Attack" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/1V6gIisPpYqgFeWbMLI0bA?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="80" title="Spotify track: Bring Me To Life" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/track/0COqiPhxzoWICwFCS4eZcp?theme=0"></iframe>
+                            </div>
+                        </div>
+                        <h5 class="mt-4 mb-3"><i class="fab fa-spotify text-primary me-2"></i>Playlists and albums I play a lot</h5>
+                        <div class="music-row-head">
+                            <p class="small text-primary fw-medium mb-0">Spotify</p>
+                            <div class="music-row-nav">
+                                <button type="button" class="btn btn-secondary btn-sm music-row-prev" aria-label="Scroll Spotify left"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-secondary btn-sm music-row-next" aria-label="Scroll Spotify right"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="music-row">
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: LAGU NOSTALGIA 80an/90an" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/2M0tqMPOaWz49oTrVRD44q?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: LAGU POP INDONESIA HITS TAHUN 2000AN" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/7wARwuyCiPRMURGmh6xTLq?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: sad jawa" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/2PFHdoH1GbA5KTyDEGMWzN?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: GREEN DAY, BLINK182, M.C.R, A.D.T.R, SUM41, PARAMORE, SIMPLE PLAN, NECK DEEP DLL" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/0eMTdXAhqOnf1s384R1eOY?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: Ariana, Taylor swift, Justin bieber, Bruno mars, Charlie puth, One Direction, Meghan trainor, Shawn" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/33YXHcCb9D7acTLddJyLSy?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: Best of JKT48" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/1L6ZC4ETtU1tsIKwl87GpA?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify playlist: Chill Anime" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/playlist/3BBLA3z4WDHdh1iNHzmVaX?theme=0"></iframe>
+                            </div>
+                            <div class="music-row-item">
+                                <iframe class="music-lazy" style="border-radius: 12px;" width="100%" height="152" title="Spotify album: Heart" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" data-src="https://open.spotify.com/embed/album/0OyN4NEEkqb2E5iiXxvJv9?theme=0"></iframe>
+                            </div>
+                        </div>
+                        <!-- End Music Rows -->
+                    </section>
+                    <!-- End Music -->
+
                     <!-- Contact Start -->
                     <section class="py-5 wow fadeInUp d-none" data-wow-delay="0.1s" id="contact">
                         <h1 class="title pb-3 mb-5" data-scroll data-scroll-speed="0.02">Contact Me</h1>
@@ -667,7 +1615,8 @@
                                 <a class="text-light px-3 border-end" href="#organization">Organization</a>
                                 <a class="text-light px-3 border-end" href="#side-experience">Training</a>
                                 <a class="text-light px-3 border-end" href="#education">Education</a>
-                                <a class="text-light px-3" href="#portfolio">Portfolio</a>
+                                <a class="text-light px-3 border-end" href="#portfolio">Portfolio</a>
+                                <a class="text-light px-3" href="#music">Music</a>
                             </div>
 							
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -725,6 +1674,108 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <!-- Start Music Flip Cards -->
+        <script>
+            (function () {
+                var active = null;
+                function show(frame) {
+                    if (frame && !frame.getAttribute('src') && frame.getAttribute('data-src')) {
+                        frame.setAttribute('src', frame.getAttribute('data-src'));
+                    }
+                }
+                var lazy = document.querySelectorAll('#music iframe.music-lazy');
+                if ('IntersectionObserver' in window) {
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                show(entry.target);
+                                io.unobserve(entry.target);
+                            }
+                        });
+                    }, { rootMargin: '200px 0px' });
+                    lazy.forEach(function (f) { io.observe(f); });
+                } else {
+                    lazy.forEach(show);
+                }
+                function flip(card, on) {
+                    if (on) {
+                        if (active && active !== card) {
+                            active.classList.remove('is-flipped');
+                        }
+                        show(card.querySelector('.music-flip-back iframe'));
+                        card.classList.add('is-flipped');
+                        active = card;
+                    } else {
+                        card.classList.remove('is-flipped');
+                        if (active === card) {
+                            active = null;
+                        }
+                    }
+                }
+                var canHover = window.matchMedia('(hover: hover)').matches;
+                document.querySelectorAll('.music-flip').forEach(function (card) {
+                    var hit = card.querySelector('.music-flip-hit');
+                    if (canHover) {
+                        hit.addEventListener('mousemove', function () {
+                            if (!card.classList.contains('is-flipped')) {
+                                flip(card, true);
+                            }
+                        });
+                    }
+                    hit.addEventListener('click', function () { flip(card, true); });
+                    hit.addEventListener('keydown', function (e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            flip(card, true);
+                        }
+                    });
+                });
+                if (canHover) {
+                    document.addEventListener('mousemove', function (e) {
+                        if (!active) {
+                            return;
+                        }
+                        var r = active.parentElement.getBoundingClientRect();
+                        if (e.clientX < r.left - 2 || e.clientX > r.right + 2 || e.clientY < r.top - 2 || e.clientY > r.bottom + 2) {
+                            flip(active, false);
+                        }
+                    });
+                }
+                document.querySelectorAll('.music-flip-toggle').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var card = btn.previousElementSibling;
+                        flip(card, !card.classList.contains('is-flipped'));
+                    });
+                });
+                document.querySelectorAll('.music-row').forEach(function (rowEl) {
+                    var nav = rowEl.previousElementSibling.querySelector('.music-row-nav');
+                    var prev = nav.querySelector('.music-row-prev');
+                    var next = nav.querySelector('.music-row-next');
+                    function step() {
+                        var item = rowEl.querySelector('.music-row-item');
+                        return item ? item.getBoundingClientRect().width + 16 : 300;
+                    }
+                    function update() {
+                        var max = rowEl.scrollWidth - rowEl.clientWidth;
+                        nav.classList.toggle('is-hidden', max <= 2);
+                        prev.disabled = rowEl.scrollLeft <= 2;
+                        next.disabled = rowEl.scrollLeft >= max - 2;
+                    }
+                    prev.addEventListener('click', function () { rowEl.scrollBy({ left: -step(), behavior: 'smooth' }); });
+                    next.addEventListener('click', function () { rowEl.scrollBy({ left: step(), behavior: 'smooth' }); });
+                    rowEl.addEventListener('scroll', function () {
+                        update();
+                        if (active && rowEl.contains(active)) {
+                            flip(active, false);
+                        }
+                    });
+                    window.addEventListener('resize', update);
+                    update();
+                });
+            })();
+        </script>
+        <!-- End Music Flip Cards -->
 
         <!-- Start Locomotive Scroll -->
         <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/bundled/locomotive-scroll.min.js"></script>
